@@ -57,22 +57,23 @@ def data():
     print("Thank you for stopping by!")
     print("I hope that you come again!")
 
-def singleCounty(deaths):
+def singleCountry(deaths):
   print("\033c")
   print("Welcome to single country deaths")
   print("Belgium")
   print("Denmark")
-  print("3. France")
-  print("4. Germany")
-  print("5. Greece")
-  print("6. Ireland")
-  print("7. Italy")
-  print("8. Luxembourg")
-  print("9. Netherlands")
-  print("10. Portugal")
-  print("11. Spain")
-  print("12. United Kingdom")
-  choice = input 
+  print("France")
+  print("Germany")
+  print("Greece")
+  print("Ireland")
+  print("Italy")
+  print("Luxembourg")
+  print("Netherlands")
+  print("Portugal")
+  print("Spain")
+  print("United Kingdom")
+  state = input("What state do you want to look at: ")
+  
 
 
 

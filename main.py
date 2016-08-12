@@ -4,6 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from valid import *
+
+#To do: 1. Make a graph for multiple countries 2. Make a function that will have data for all states and 
+#then total by year. 
  
 def main():
   print("\033c")
@@ -37,13 +40,14 @@ def mainMenu():
 
 def data():
   print("\033c")
-  print("Welcome to the data section")
+  print("Welcome to the Data Section")
   print("Here you will decide how you want to look at the data")
   deaths = pd.read_csv('eu_terrorism_fatalities.csv', index_col='Year')
   print("1. Individual Country")
   print("2. Multiple Countries")
-  print("3. Main Menu")
-  print("4. Quit")
+  print("3. Total Deaths")
+  print("4. Main Menu")
+  print("5. Quit")
   choice = int(input("What is your choice? "))
   while not validData(choice):
     choice = int(input("What is your choice? "))
@@ -52,8 +56,10 @@ def data():
   elif choice == 2:
     multipleCountry(deaths)
   elif choice == 3:
-    mainMenu()
+    totalDeaths(deaths)
   elif choice ==  4:
+    mainMenu()
+  elif choice == 5:
     print("Thank you for stopping by!")
     print("I hope that you come again!")
 
@@ -88,6 +94,12 @@ def singleCountry(deaths):
   plt.xlabel("Year", fontsize=14)
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
+
+def multipleCountry(deaths):
+  print("\033c")
+
+def totalDeaths(deaths):
+  print("\033c")
 
 main()
 

@@ -39,7 +39,7 @@ def data():
   print("\033c")
   print("Welcome to the data section")
   print("Here you will decide how you want to look at the data")
-  deaths = pd.read_csv('eu_terrorism_fatalities.csv')
+  deaths = pd.read_csv('eu_terrorism_fatalities.csv', index_col='Year')
   print("1. Individual Country")
   print("2. Multiple Countries")
   print("3. Main Menu")
@@ -73,9 +73,21 @@ def singleCountry(deaths):
   print("Spain")
   print("United Kingdom")
   state = input("What state do you want to look at: ")
-  
-
-
+  count  = []
+  years = []
+  specificCountry = deaths[[state]]
+  year = 1970
+  while year < 2015:
+    yearData = specificCountry.loc[[year]]
+    deathsAtYear = yearData.iat[0,0]
+    count.append(deathsAtYear)
+    years.append(year)
+    year += 1
+  plt.plot(years, count, linewidth=2, c="blue")
+  plt.title("Death Toll By Year", fontsize=16)
+  plt.xlabel("Year", fontsize=14)
+  plt.ylabel("Deaths", fontsize=12)
+  plt.show()
 
 main()
 

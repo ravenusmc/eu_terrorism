@@ -240,12 +240,55 @@ def multipleCountry(deaths):
   elif choice == 2:
     quit()
 
+def totalDeaths(deaths):
+  print("\033c")
+  print("Welcome to Total Country Deaths")
+  print("Here enter the countries that you want to examine")
+  print("Leave a blank space when you are done entering in countries.")
+  print("To move on, you MUST close the graph when you are done!")
+  states = ["Belgium", "Denmark", "France", "Germany", "Greece", "Ireland", "Italy", "Luxembourg", "Netherlands", "Portugal", "Spain", "United Kingdom"]
+  basicCount = []
+  totalCount = []
+  years = []
+  total = 0
+
+  year = 1970 
+  while year < 2015:
+    for state in states:
+      specificCountry = deaths[[state]]
+      yearData = specificCountry.loc[[year]]
+      deathsatYear = yearData.iat[0,0]
+      basicCount.append(deathsatYear)
+    years.append(year)
+    year += 1 
+  value = 0
+  num1 = 0
+  num2 = 12
+  while value < 45:
+    deathTotal = basicCount[num1:num2]
+    summation = sum(deathTotal)
+    totalCount.append(summation)
+    num1 = num1 + 12
+    num2 = num2 + 12 
+    value += 1
+  plt.plot(years, totalCount, linewidth=2, c="crimson")
+  plt.title("Death Toll By Year", fontsize=16)
+  plt.xlabel("Year", fontsize=14)
+  plt.ylabel("Deaths", fontsize=12)
+  plt.show()
+
+  print("1. Main Menu")
+  print("2. Quit")
+  choice = int(input("What do you want to do now? "))
+  while not validMain(choice):
+    choice = int(input("What do you want to do now? "))
+  if choice == 1:
+    data()
+  elif choice == 2:
+    quit()
 
 def quit():
   print("Thank you for stopping by!")
-
-def totalDeaths(deaths):
-  print("\033c")
 
 main()
 

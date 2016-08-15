@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 from valid import *
 
-#To do: 1. Make a graph for multiple countries 2. Make a function that will have data for all states and 
-#then total by year. 
+#To do: 1. Make a function that will have data for all states and 
+#then total by year. 2. Add Comments!
  
 def main():
   print("\033c")
@@ -21,8 +21,7 @@ def main():
   if choice == 1:
     mainMenu()
   elif choice == 2:
-    print("Thank you for stopping by!")
-    print("I hope that you come again!")
+    quit()
 
 def mainMenu():
   print("\033c")
@@ -35,8 +34,7 @@ def mainMenu():
   if choice == 1:
     data()
   elif choice == 2:
-    print("Thank you for stopping by!")
-    print("I hope that you come again!")
+    quit()
 
 def data():
   print("\033c")
@@ -60,8 +58,7 @@ def data():
   elif choice ==  4:
     mainMenu()
   elif choice == 5:
-    print("Thank you for stopping by!")
-    print("I hope that you come again!")
+    quit()
 
 def singleCountry(deaths):
   print("\033c")
@@ -95,11 +92,22 @@ def singleCountry(deaths):
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
 
+  print("1. Main Menu")
+  print("2. Quit")
+  choice = int(input("What do you want to do now? "))
+  while not validMain(choice):
+    choice = int(input("What do you want to do now? "))
+  if choice == 1:
+    data()
+  elif choice == 2:
+    quit()
+
 def multipleCountry(deaths):
   print("\033c")
   print("Welcome to Multiple Country Deaths")
   print("Here enter the countries that you want to examine")
   print("Leave a blank space when you are done entering in countries.")
+  print("To move on, you MUST close the graph when you are done!")
   print("Belgium")
   print("Denmark")
   print("France")
@@ -221,6 +229,20 @@ def multipleCountry(deaths):
   plt.xlabel("Year", fontsize=14)
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
+
+  print("1. Main Menu")
+  print("2. Quit")
+  choice = int(input("What do you want to do now? "))
+  while not validMain(choice):
+    choice = int(input("What do you want to do now? "))
+  if choice == 1:
+    data()
+  elif choice == 2:
+    quit()
+
+
+def quit():
+  print("Thank you for stopping by!")
 
 def totalDeaths(deaths):
   print("\033c")

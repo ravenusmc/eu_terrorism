@@ -11,3 +11,13 @@ def validData(choice):
     return True
   else:
     return False
+
+def validMultiple(state):
+  if state == "Belgium" or state == "France" or state == "Germany" or state == "Greece" or state == "Ireland" or state == "Italy" or state == "Luxembourg" or state == "Netherlands" or state == "Portugal" or state == "Spain" or state == "United Kingdom" or state == "":
+    return True
+  else: 
+    return False
+
+
+
+

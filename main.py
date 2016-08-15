@@ -117,6 +117,9 @@ def multipleCountry(deaths):
 
   while True:
     state = input("Please enter a country to examine: ")
+    while not validMultiple(state):
+      print("You did not enter a country correctly!")
+      state = input("Please enter a country to examine: ")
     if state == "":
       break
     else: 

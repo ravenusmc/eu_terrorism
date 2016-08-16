@@ -25,15 +25,7 @@ def main():
 def mainMenu():
   print("\033c")
   print("Welcome to the main menu")
-  print("1. Look at data")
-  print("2. Quit")
-  choice = int(input("What is your choice? "))
-  while not validMain(choice):
-    choice = int(input("What is your choice? "))
-  if choice == 1:
-    data()
-  elif choice == 2:
-    quit()
+  menuSelection()
 
 def data():
   print("\033c")
@@ -59,7 +51,7 @@ def data():
     conclusion()
   elif choice ==  5:
     mainMenu()
-  elif choice == 5:
+  elif choice == 6:
     quit()
 
 def singleCountry(deaths):
@@ -94,15 +86,7 @@ def singleCountry(deaths):
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
 
-  print("1. Main Menu")
-  print("2. Quit")
-  choice = int(input("What do you want to do now? "))
-  while not validMain(choice):
-    choice = int(input("What do you want to do now? "))
-  if choice == 1:
-    data()
-  elif choice == 2:
-    quit()
+  menuSelection()
 
 def multipleCountry(deaths):
   print("\033c")
@@ -232,15 +216,7 @@ def multipleCountry(deaths):
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
 
-  print("1. Main Menu")
-  print("2. Quit")
-  choice = int(input("What do you want to do now? "))
-  while not validMain(choice):
-    choice = int(input("What do you want to do now? "))
-  if choice == 1:
-    data()
-  elif choice == 2:
-    quit()
+  menuSelection()
 
 def totalDeaths(deaths):
   print("\033c")
@@ -279,6 +255,28 @@ def totalDeaths(deaths):
   plt.ylabel("Deaths", fontsize=12)
   plt.show()
 
+  menuSelection()
+
+def conclusion():
+  print("A few years ago I watched the documentary 'The Power of Nightmares' which talked about terrorism")
+  print("At first, I the documentary did not seem that interesting but it quickly caught my attention.")
+  print("Its main argument was that Terrorism is not a real threat but instead the public has been told it is.")
+  print("Without doing a lot of analysis, I would say that the data in this program supports that claim.")
+  print("Terrorism was at its height in the 1970's. In the modern day it has dropped.")
+  print("I will admit that my data stops in 2014.")
+  print("Yet, I believe that this may be a stage that we are going through.")
+  print("ISIS is/was growing but it is being beaten back.")
+  print("I would not be surprised to see terrorism drop off by 2020.")
+  print("At the same time, it may be around for a few more years and then drop off.")
+  print("Terrorism will come back from time to time but I believe it is the result")
+  print("of cultural/social problems that governments fail to handle.")
+  print("Finally, thank you for using my program!")
+  menuSelection()
+
+def quit():
+    print("Thank you for stopping by!")
+
+def menuSelection():
   print("1. Main Menu")
   print("2. Quit")
   choice = int(input("What do you want to do now? "))
@@ -288,16 +286,6 @@ def totalDeaths(deaths):
     data()
   elif choice == 2:
     quit()
-
-def quit():
-  print("Thank you for stopping by!")
-
-def conclusion():
-  print("A few years ago I watched the documentary 'The Power of Nightmares' which talked about terrorism")
-  print("At first, I the documentary did not seem that interesting but it quickly caught my attention.")
-  print("Its main argument was that Terrorism is not a real threat but instead the public has been told it is.")
-  print("Without doing a lot of analysis, I would say that the data in this program supports that claim.")
-  print()
 
 main()
 

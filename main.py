@@ -294,7 +294,10 @@ def quit():
 
 def conclusion():
   print("A few years ago I watched the documentary 'The Power of Nightmares' which talked about terrorism")
-  
+  print("At first, I the documentary did not seem that interesting but it quickly caught my attention.")
+  print("Its main argument was that Terrorism is not a real threat but instead the public has been told it is.")
+  print("Without doing a lot of analysis, I would say that the data in this program supports that claim.")
+  print()
 
 main()
 

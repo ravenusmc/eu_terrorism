@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 
 from valid import *
 
-#To do: 1. Make a function that will have data for all states and 
-#then total by year. 2. Add Comments!
+#To do: 1. Add Comments!
  
 def main():
   print("\033c")
@@ -44,8 +43,9 @@ def data():
   print("1. Individual Country")
   print("2. Multiple Countries")
   print("3. Total Deaths")
-  print("4. Main Menu")
-  print("5. Quit")
+  print("4. Conclusion")
+  print("5. Main Menu")
+  print("6. Quit")
   choice = int(input("What is your choice? "))
   while not validData(choice):
     choice = int(input("What is your choice? "))
@@ -55,7 +55,9 @@ def data():
     multipleCountry(deaths)
   elif choice == 3:
     totalDeaths(deaths)
-  elif choice ==  4:
+  elif choice == 4:
+    conclusion()
+  elif choice ==  5:
     mainMenu()
   elif choice == 5:
     quit()
@@ -289,6 +291,10 @@ def totalDeaths(deaths):
 
 def quit():
   print("Thank you for stopping by!")
+
+def conclusion():
+  print("A few years ago I watched the documentary 'The Power of Nightmares' which talked about terrorism")
+  
 
 main()
 

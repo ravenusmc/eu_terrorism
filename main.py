@@ -4,9 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from valid import *
-
-#To do: 1. Add Comments!
  
+#This is the main function of the progam that will actually start everything. 
 def main():
   print("\033c")
   print("Welcome to European Terrorism Data.")
@@ -22,11 +21,13 @@ def main():
   elif choice == 2:
     quit()
 
+#The first main menu that the user will come to. 
 def mainMenu():
   print("\033c")
   print("Welcome to the main menu")
   menuSelection()
 
+#Here we have the actually main menu which allows the user to choose what they want to look at. 
 def data():
   print("\033c")
   print("Welcome to the Data Section")

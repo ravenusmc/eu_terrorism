@@ -55,6 +55,8 @@ def data():
   elif choice == 6:
     quit()
 
+#This is the single country function where a user chooses one country to look at. The data 
+#will then appear on the screen in a line graph. 
 def singleCountry(deaths):
   print("\033c")
   print("Welcome to single country deaths")
@@ -89,6 +91,7 @@ def singleCountry(deaths):
 
   menuSelection()
 
+#This function allows the user to select multiple countries to look at. 
 def multipleCountry(deaths):
   print("\033c")
   print("Welcome to Multiple Country Deaths")

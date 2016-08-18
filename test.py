@@ -57,12 +57,7 @@ plt.show()
   # for value in basicCount:
   #   total = total + value
   # totalCount.append(total)
-  
-
-  
-  
-
-# print(totalCount) 
+ 
 
 
 

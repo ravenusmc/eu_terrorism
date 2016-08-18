@@ -222,6 +222,13 @@ def multipleCountry(deaths):
 
   menuSelection()
 
+#This function will take the total deaths, for each country, per year and add them together to get one 
+#total. It will then take that total for each year and display it on a line graph. This was probably 
+#The hardest function to write. I still believe that it can be cleaned up a little bit more to 
+#make it easier to understand. I also believe that it is not dry! Over in the play.py file I also 
+#attempted to use other methods to get the data out that I wanted to. Feel free to look at them-
+#I have them labeled as way number one and number two. I will also have comments there as to what 
+#Exactly this function does and how it does it. 
 def totalDeaths(deaths):
   print("\033c")
   print("Welcome to Total Country Deaths")
@@ -261,6 +268,7 @@ def totalDeaths(deaths):
 
   menuSelection()
 
+#This is a simple function where some quick analysis was done, by me, about what my conclusions are. 
 def conclusion():
   print("A few years ago I watched the documentary 'The Power of Nightmares' which talked about terrorism")
   print("At first, I the documentary did not seem that interesting but it quickly caught my attention.")
@@ -277,9 +285,12 @@ def conclusion():
   print("Finally, thank you for using my program!")
   menuSelection()
 
+#I decided that I wanted to stop writing the statement that this function prints out so I created 
+#a print statement for it. 
 def quit():
     print("Thank you for stopping by!")
 
+#Another function that I created so that I would not have to repeat myself over and over again. 
 def menuSelection():
   print("1. Main Menu")
   print("2. Quit")
@@ -291,6 +302,7 @@ def menuSelection():
   elif choice == 2:
     quit()
 
+#This line starts the whole program. 
 main()
 
 
